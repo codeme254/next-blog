@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Header from "../components/header/header";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -18,8 +19,11 @@ export default function RootLayout({
   children: Readonly<React.ReactNode>;
 }) {
   return (
-    <html>
-      <body className={openSans.className}>{children}</body>
+    <html lang="en">
+      <body className={openSans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

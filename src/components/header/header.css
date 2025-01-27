@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.search-input,
+.search-btn {
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  --border-radius: 5px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.search-btn {
+  background-color: #222;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  --border-radius: 5px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  transform: translateX(-3px);
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.toggle-nav-menu-btn,
+.search-toggle-btn {
+  display: none;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.header-nav a,
+.header-nav:visited {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #333;
+  font-weight: 500;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  --size: 5rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+
+/* ===================== */
+/* media queries */
+/* ===================== */
+
+@media screen and (max-width: 40.625em) {
+  .header-nav {
+    order: 1;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .header-nav a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .nav-hidden {
+    display: none;
+  }
+
+  .toggle-nav-menu-btn {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .search-form {
+    order: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .search-input,
+  .search-btn {
+    border-radius: 5px;
+  }
+
+  .search-btn {
+    transform: none;
+  }
+
+  .search-toggle-btn {
+    display: flex;
+    font-size: 2.5rem;
+    border: 1px solid #888;
+    padding: 1rem;
+    border-radius: 100px;
+  }
+
+  .search-form-hidden {
+    display: none;
+  }
+}
