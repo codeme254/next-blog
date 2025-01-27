@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Link from "next/link";
 import { IoMdMenu } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import "./header.css";
@@ -39,9 +40,9 @@ export default function Header() {
         </button>
       </form>
       <nav className="header-nav nav-hidden" ref={navRef}>
-        <a href="#">Home</a>
-        <a href="#">about</a>
-        <a href="">projects</a>
+        <Link href="/">Home</Link>
+        <Link href="/">about</Link>
+        <Link href="/">projects</Link>
       </nav>
       <div className="header-controls">
         <img
